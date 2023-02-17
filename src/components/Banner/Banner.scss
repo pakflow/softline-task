@@ -1,0 +1,41 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  .banner__title {
+    position: absolute;
+    top: 158px;
+    left: 70px;
+    width: 709px;
+    height: 168px;
+    font-size: 56px;
+    line-height: 100%;
+    color: #444444;
+  }
+  .banner__btn {
+    position: absolute;
+    top: 386px;
+    left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 56px;
+    background: #b01736;
+    border-radius: 8px;
+    color: #ffffff;
+  }
+  .banner__info {
+    .banner__info_title {
+      width: 1110px;
+      height: 350px;
+      margin: 100px auto;
+      padding: 99px 110px;
+      box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+      font-size: 32px;
+      line-height: 120%;
+      /* or 38px */
+      text-align: center;
+    }
+  }
+}
