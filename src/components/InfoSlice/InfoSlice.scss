@@ -1,0 +1,13 @@
+.info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  .info__item {
+    margin: 40px 100px;
+    .info__item_counter {
+      font-size: 64px;
+      color: var(--title-color);
+    }
+  }
+}
