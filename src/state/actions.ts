@@ -1,7 +1,8 @@
-import { cities, state } from ".";
+import { cities, ICity, state } from ".";
 
-const handleMap = () => {
+const handleMap = (city: ICity) => {
   cities.forEach((item) => {
+    if (item.id !== city.id) return;
     state.setState({
       ...state,
       activeCity: item.city,

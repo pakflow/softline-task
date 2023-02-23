@@ -9,12 +9,13 @@ export interface CityItemProps {
 function CityItem({ city }: CityItemProps) {
   return createElement(
     "button",
-    city.id !== state.getState().activeCityId
-      ? {
-          className: "mapslice__header_cities_item",
-          onclick: () => handleMap(),
-        }
-      : {},
+    {
+      className:
+        city.id !== state.getState().activeCityId
+          ? "mapslice__header_cities_item"
+          : "mapslice__header_cities_item active",
+      onclick: () => handleMap(city),
+    },
     [city.city]
   );
 }
