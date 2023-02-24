@@ -13,6 +13,7 @@ interface IState {
   activeCity: string;
   activeMap: HTMLElement | null;
   activeCityId: number;
+  mapLoading: boolean;
 }
 
 export interface ICity {
@@ -73,6 +74,7 @@ const state = new Store<IState>({
   activeCity: "Все",
   activeMap: mapGeneral,
   activeCityId: 1,
+  mapLoading: false,
 });
 
 export { state };

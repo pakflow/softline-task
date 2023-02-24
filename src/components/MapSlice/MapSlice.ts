@@ -7,11 +7,12 @@ import "./MapSlice.scss";
 
 export interface CityListProps {
   cities: ICity[];
+  loading: boolean;
 }
 
-function MapSlice({ cities }: CityListProps) {
+function MapSlice({ cities, loading }: CityListProps) {
   return createElement("div", { className: "mapslice" }, [
-    createElement("div", { className: "mapslice__header" }, [
+    createElement("nav", { className: "mapslice__header" }, [
       createElement("button", { className: "mapslice__header_select-list" }, [
         "Офисы Softline ",
         createElement("img", { src: pointer, alt: "select-pointer" }),
@@ -22,11 +23,15 @@ function MapSlice({ cities }: CityListProps) {
         cities.map((city) => CityItem({ city: city }))
       ),
     ]),
-    createElement("img", {
-      src: state.getState().activeMap,
-      alt: "map",
-      className: "mapslice__map",
-    }),
+    loading
+      ? createElement("span", { className: "mapslice__map_loading" }, [
+          "Loading...",
+        ])
+      : createElement("img", {
+          src: state.getState().activeMap,
+          alt: "map",
+          className: "mapslice__map",
+        }),
   ]);
 }
 

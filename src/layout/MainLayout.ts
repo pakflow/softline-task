@@ -6,12 +6,12 @@ import { createElement } from "../libs/render/utils/createElement";
 
 import "./MainLayout.scss";
 
-function MainLayout({ cities }: CityListProps) {
+function MainLayout({ cities, loading }: CityListProps) {
   return createElement("div", { className: "mainlayout" }, [
     Navbar(),
     Banner(),
     InfoSlice(),
-    MapSlice({ cities }),
+    MapSlice({ cities, loading }),
   ]);
 }
 

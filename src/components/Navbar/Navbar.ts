@@ -4,7 +4,7 @@ import logo from "../../assets/images/softlinelogo.svg";
 import "./Navbar.scss";
 
 function Navbar() {
-  return createElement("div", { className: "navbar" }, [
+  return createElement("nav", { className: "navbar" }, [
     createElement("img", {
       src: logo,
       alt: "logo",

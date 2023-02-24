@@ -8,7 +8,10 @@ const dom = new Renderer();
 const root = document.getElementById("root");
 
 function render() {
-  dom.render(MainLayout({ cities }), root);
+  dom.render(
+    MainLayout({ cities: cities, loading: state.getState().mapLoading }),
+    root
+  );
 }
 
 state.subscribe(render);
